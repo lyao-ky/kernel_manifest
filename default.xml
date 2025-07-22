@@ -2,6 +2,8 @@
 <manifest>
   <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/" />
   <remote name="github" fetch="https://github.com/"/>
+  <superproject name="platform/superproject" remote="aosp" revision="android-16.0.0_r2"/>
+  <contactinfo bugurl="go/repo-bug" />
   <default revision="refs/tags/android-16.0.0_r2" remote="aosp" sync-j="12" />
   <project name="pa-gr/android_kernel_build" path="kernel_platform/build" remote="github" revision="uvite-xiaomi-sm8450"/>
   <project name="pa-gr/android_kernel_prebuilts_build-tools" path="kernel_platform/prebuilts/kernel-build-tools" remote="github" revision="uvite-xiaomi-sm8450"/>
