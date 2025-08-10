@@ -2,7 +2,7 @@
 <manifest>
   <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
   <remote name="github" fetch="https://github.com/"/>
-  <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
+  <default revision="kernel.build.lnx.1.0" remote="aosp" sync-j="4" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" revision="master-kernel-build-2021"/>
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" revision="master-kernel-build-2021"/>
   <project name="cupid-development/android_kernel_xiaomi_sm8450" path="kernel_platform/xiaomi/sm8450" remote="github" revision="lineage-22.2"/>
