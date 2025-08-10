@@ -2,8 +2,6 @@
 <manifest>
   <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
   <remote name="github" fetch="https://github.com/"/>
-  <superproject name="platform/superproject" remote="aosp" revision="android-16.0.0_r2"/>
-  <contactinfo bugurl="go/repo-bug" />
   <default revision="refs/tags/android-16.0.0_r2" remote="aosp" sync-j="12" />
   <project name="cupid-development/android_kernel_xiaomi_sm8450" path="kernel_platform/xiaomi/sm8450" remote="github" revision="lineage-22.2"/>
   <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel_platform/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-22.2"/>
