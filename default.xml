@@ -1,15 +1,21 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/" />
-  <remote name="github" fetch="https://github.com/"/>
-  <superproject name="platform/superproject" remote="aosp" revision="android-16.0.0_r2"/>
-  <contactinfo bugurl="go/repo-bug" />
-  <default revision="refs/tags/android-16.0.0_r2" remote="aosp" sync-j="12" />
-  <project name="pa-gr/android_kernel_build" path="kernel_platform/build" remote="github" revision="uvite-xiaomi-sm8450"/>
-  <project name="pa-gr/android_kernel_prebuilts_build-tools" path="kernel_platform/prebuilts/kernel-build-tools" remote="github" revision="uvite-xiaomi-sm8450"/>
-  <project name="cupid-development/android_kernel_xiaomi_sm8450" path="kernel_platform/xiaomi/sm8450" remote="github" revision="lineage-22.2"/>
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel_platform/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-22.2"/>
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-modules" path="kernel_platform/xiaomi/sm8450-modules" remote="github" revision="lineage-22.2"/>
-  <project name="lyao-ky/kernel_manifest" path="manifest" remote="github" revision="lineage-xiaomi-sm7475"/>
-  <project name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="refs/heads/ks-kernel.lnx.1.0.r1-rel"/>
+  <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+  <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
+  <superproject name="kernel/superproject" remote="aosp" revision="common-android12-5.10-lts" />
+  <project path="build" name="kernel/build" />
+  <project path="hikey-modules" name="kernel/hikey-modules" revision="android12-5.10" />
+  <project path="common" name="kernel/common" revision="android12-5.10-lts" />
+  <project path="kernel/tests" name="kernel/tests" revision="main" />
+  <project path="kernel/configs" name="kernel/configs"/>
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android12-5.10" />
+  <project path="prebuilts/gas/linux-x86" name="platform/prebuilts/gas/linux-x86" clone-depth="1" />
+  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
+  <project path="prebuilts/tradefed" name="platform/tools/tradefederation/prebuilts" revision="main" clone-depth="1" />
+  <project path="prebuilts/asuite" name="platform/prebuilts/asuite" revision="main" clone-depth="1" />
+  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" />
 </manifest>
